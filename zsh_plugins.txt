@@ -1,0 +1,32 @@
+ohmyzsh/ohmyzsh 
+
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/cp
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/ubuntu
+ohmyzsh/ohmyzsh path:plugins/sudo
+ohmyzsh/ohmyzsh path:plugins/extract
+ohmyzsh/ohmyzsh path:plugins/z
+ohmyzsh/ohmyzsh path:plugins/last-working-dir
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+ohmyzsh/ohmyzsh path:plugins/vi-mode
+ohmyzsh/ohmyzsh path:plugins/fzf
+ohmyzsh/ohmyzsh path:plugins/zsh-interactive-cd
+ohmyzsh/ohmyzsh path:plugins/jsontools
+
+zdharma-continuum/fast-syntax-highlighting
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search
+changyuheng/fz
+chrissicool/zsh-256color
+rutchkiwi/copyzshell
+mattmc3/zsh-safe-rm
+DarrinTisdale/zsh-aliases-exa
+MichaelAquilina/zsh-you-should-use
+mafredri/zsh-async 
+seletskiy/zsh-fuzzy-search-and-edit 
+bilelmoussaoui/flatpak-zsh-completion 
+MichaelAquilina/zsh-auto-notify
+
+romkatv/powerlevel10k
+
