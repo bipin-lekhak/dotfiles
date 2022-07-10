@@ -19,6 +19,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+export ANTIBODY_HOME=~/Libary/antibody
 source ~/.zsh_plugins.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
