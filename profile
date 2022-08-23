@@ -27,3 +27,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 source ~/.zshrc
 . "$HOME/.cargo/env"
+
