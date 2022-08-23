@@ -5,6 +5,23 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# zsh completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -31,13 +48,6 @@ export PATH="$HOME/gems/bin:$PATH"
 export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 
-source /home/bipin/.config/broot/launcher/bash/br
-alias icat="kitty +kitten icat"
-
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
-eval "$(register-python-argcomplete pipx)"
-
 autoload -U +X bashcompinit && bashcompinit
 
 bindkey -M viins 'jj' vi-cmd-mode
@@ -45,8 +55,12 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey "^P" fuzzy-search-and-edit 
 
-# Created by `pipx` on 2021-12-05 17:02:49
-export PATH="$PATH:/home/bipin/.local/bin"
-eval "$(register-python-argcomplete pipx)"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 source ~/.p10.zsh
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export PATH="/Users/bipinlekhak/Library/Python/3.10/bin:$PATH"
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
