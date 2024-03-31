@@ -8,8 +8,7 @@ ohmyzsh/ohmyzsh path:plugins/cp
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh path:plugins/colorize
 ohmyzsh/ohmyzsh path:plugins/copypath
-ohmyzsh/ohmyzsh path:plugins/brew
-ohmyzsh/ohmyzsh path:plugins/macos
+ohmyzsh/ohmyzsh path:plugins/ubuntu
 ohmyzsh/ohmyzsh path:plugins/sudo
 ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/z
@@ -19,6 +18,7 @@ ohmyzsh/ohmyzsh path:plugins/vi-mode
 ohmyzsh/ohmyzsh path:plugins/fzf
 ohmyzsh/ohmyzsh path:plugins/zsh-interactive-cd
 ohmyzsh/ohmyzsh path:plugins/jsontools
+ohmyzsh/ohmyzsh path:plugins/poetry
 
 zdharma-continuum/fast-syntax-highlighting
 zsh-users/zsh-autosuggestions
@@ -32,7 +32,6 @@ MichaelAquilina/zsh-you-should-use
 mafredri/zsh-async 
 seletskiy/zsh-fuzzy-search-and-edit 
 bilelmoussaoui/flatpak-zsh-completion 
-MichaelAquilina/zsh-auto-notify
 
 romkatv/powerlevel10k
 

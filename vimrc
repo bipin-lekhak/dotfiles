@@ -23,7 +23,9 @@ Plugin 'frazrepo/vim-rainbow'
 Plugin 'itchyny/lightline.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'hzchirs/vim-material'
-
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -109,3 +111,19 @@ set history=1000
 
 " Set 256-color
 set t_Co=256
+
+" Set lang server for python
+imap <c-space> <Plug>(asyncomplete_force_refresh)
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+if executable('pyls')
+        " pip install python-language-server
+        au User lsp_setup call lsp#register_server({
+             \ 'name': 'pyls',
+             \ 'cmd': {server_info->['pyls']},
+             \ 'allowlist': ['python'],
+             \ })
+endif

@@ -36,7 +36,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export ANTIBODY_HOME=~/Libary/antibody
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export ANTIBODY_HOME=~/Library/antibody
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 source ~/.zsh_plugins.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -45,7 +48,7 @@ source ~/.zsh_plugins.sh
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
-export PATH="$HOME/.pyenv/bin:$PATH"
+# export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 
 autoload -U +X bashcompinit && bashcompinit
@@ -64,3 +67,42 @@ eval "$(pyenv init -)"
 export PATH="/Users/bipinlekhak/Library/Python/3.10/bin:$PATH"
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
+export PATH="$HOME/.local/bin:$PATH"
+export ZSH_COLORIZE_TOOL=chroma
+#export PATH=/usr/local/cuda-11.0/bin${PATH:+:${PATH}}
+#export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/bl1282/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/bl1282/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/home/bl1282/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/bl1282/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/home/bl1282/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/home/bl1282/mambaforge/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+
+
+PATH="/home/bl1282/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/bl1282/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/bl1282/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/bl1282/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/bl1282/perl5"; export PERL_MM_OPT;
+
+source ~/.profile
+source ~/.zprofile
+FZ_HISTORY_CD_CMD=zshz
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
