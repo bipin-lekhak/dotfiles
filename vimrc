@@ -23,9 +23,6 @@ Plugin 'frazrepo/vim-rainbow'
 Plugin 'itchyny/lightline.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'hzchirs/vim-material'
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
 call vundle#end()
 filetype plugin indent on
