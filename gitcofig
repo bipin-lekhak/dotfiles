@@ -1,5 +1,5 @@
 [user]
-	email = bplthegreat@gmail.com
+	email = bipin.lekhak@outlook.com
 	name = Bipin Lekhak
 [core]
-	editor = vim
+	editor = nvim
