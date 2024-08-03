@@ -1,31 +1,25 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin()
 
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'preservim/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'dracula/vim', {'name':'dracula'}
-Plugin 'dense-analysis/ale'
-Plugin 'frazrepo/vim-rainbow'
-Plugin 'itchyny/lightline.vim'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'hzchirs/vim-material'
+Plug 'tmhedberg/SimpylFold'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'nvie/vim-flake8'
+Plug 'preservim/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'sheerun/vim-polyglot'
+Plug 'dracula/vim', {'name':'dracula'}
+Plug 'dense-analysis/ale'
+Plug 'frazrepo/vim-rainbow'
+Plug 'itchyny/lightline.vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'hzchirs/vim-material'
 
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " ignore files in Nerd Tree
