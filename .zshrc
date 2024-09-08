@@ -72,27 +72,6 @@ then
   compinit
 fi
 
-if [ -d $HOME/mambaforge ]; then
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/bl1282/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/bl1282/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/bl1282/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/bl1282/mambaforge/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-if [ -f "/home/bl1282/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/home/bl1282/mambaforge/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
-
-fi
 
 if [ -d $HOME/perl5/bin ]; then
   PATH="/home/bl1282/perl5/bin${PATH:+:${PATH}}"; export PATH;
