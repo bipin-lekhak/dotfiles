@@ -7,8 +7,16 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 
+-- Plugins
+local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
+local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
+
+
 -- For example, changing the color scheme:
-config.color_scheme = "Dracula+"
+config.color_scheme = 'MaterialDarker'
+
+bar.apply_to_config(config, {modules = { spotify = { enabled = false } }})
+workspace_switcher.apply_to_config(config)
 
 -- Set leader key
 config.leader = { key = "z", mods = "OPT", timeout_milliseconds = 1500 }
@@ -27,6 +35,7 @@ config.keys = {
   { key = "c", mods = "CMD", action = act.CopyTo("Clipboard") },
   { key = "n", mods = "CMD", action = act.SpawnWindow },
   { key = "v", mods = "CMD", action = act.PasteFrom("Clipboard") },
+  { key = "p", mods = "CMD", action = workspace_switcher.switch_workspace() },
   {
     key = ",",
     mods = "LEADER",
