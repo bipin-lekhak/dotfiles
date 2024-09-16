@@ -15,8 +15,17 @@ local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/s
 -- For example, changing the color scheme:
 config.color_scheme = 'MaterialDarker'
 
-bar.apply_to_config(config, {modules = { spotify = { enabled = false } }})
 workspace_switcher.apply_to_config(config)
+bar.apply_to_config(
+  config,
+  {
+    modules = {
+      spotify = {
+        enabled = false,
+      },
+    },
+  }
+)
 
 -- Set leader key
 config.leader = { key = "z", mods = "OPT", timeout_milliseconds = 1500 }
