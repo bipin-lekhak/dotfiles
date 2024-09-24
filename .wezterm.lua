@@ -9,13 +9,11 @@ local config = wezterm.config_builder()
 
 -- Plugins
 local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
-local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
 
 
 -- For example, changing the color scheme:
 config.color_scheme = 'MaterialDarker'
 
-workspace_switcher.apply_to_config(config)
 bar.apply_to_config(
   config,
   {
@@ -44,7 +42,6 @@ config.keys = {
   { key = "c", mods = "CMD", action = act.CopyTo("Clipboard") },
   { key = "n", mods = "CMD", action = act.SpawnWindow },
   { key = "v", mods = "CMD", action = act.PasteFrom("Clipboard") },
-  { key = "p", mods = "CMD", action = workspace_switcher.switch_workspace() },
   {
     key = ",",
     mods = "LEADER",
