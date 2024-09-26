@@ -36,3 +36,6 @@ if [ -d "/usr/local/texlive/2022/bin/x86_64-linux" ]; then
     PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
 fi
 . "$HOME/.cargo/env"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
