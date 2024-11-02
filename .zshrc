@@ -33,7 +33,6 @@ source ~/.zsh_plugins.sh
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
-[ ! -d $HOME/.pyenv/bin ] || export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 
 autoload -U +X bashcompinit && bashcompinit
@@ -43,16 +42,13 @@ bindkey "^P" fuzzy-search-and-edit
 
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 source ~/.p10.zsh
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 export PATH="/Users/bipinlekhak/Library/Python/3.10/bin:$PATH"
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 
 [ ! -d $HOME/.local/bin ] || export PATH="$PATH:$HOME/.local/bin"
-export ZSH_COLORIZE_TOOL=chroma
+# export ZSH_COLORIZE_TOOL=chroma
 
 [ -e "${HOME}/.iterm2_shell_integration.zsh" ] && source "${HOME}/.iterm2_shell_integration.zsh"
 
